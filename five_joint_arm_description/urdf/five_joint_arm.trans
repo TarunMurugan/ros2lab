@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<robot name="five_joint_arm" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="base_l1_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="base_l1_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="base_l1_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="l1_l2_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="l1_l2_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="l1_l2_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="l2_l3_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="l2_l3_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="l2_l3_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="l3_l4_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="l3_l4_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="l3_l4_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="l4_l5_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="l4_l5_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="l4_l5_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

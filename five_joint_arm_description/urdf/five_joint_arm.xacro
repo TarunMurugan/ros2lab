@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<robot name="five_joint_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find five_joint_arm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find five_joint_arm_description)/urdf/five_joint_arm.trans" />
+<xacro:include filename="$(find five_joint_arm_description)/urdf/five_joint_arm.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-1.1580046200244058e-17 5.790023100122029e-18 0.024999999999999994" rpy="0 0 0"/>
+    <mass value="3.082687791334984"/>
+    <inertia ixx="0.002569" iyy="0.002569" izz="0.003853" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="limb1_1">
+  <inertial>
+    <origin xyz="0.022836536711912547 -1.1184147905233377e-17 0.04225427622591389" rpy="0 0 0"/>
+    <mass value="6.383618554951958"/>
+    <inertia ixx="0.008001" iyy="0.010215" izz="0.010193" ixy="-0.0" iyz="-0.0" ixz="-0.001547"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/limb1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/limb1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="limb2_1">
+  <inertial>
+    <origin xyz="0.03978873577297347 -1.474417275201089e-17 0.010211264227026493" rpy="0 0 0"/>
+    <mass value="4.842274659284468"/>
+    <inertia ixx="0.005953" iyy="0.005853" izz="0.005953" ixy="-0.0" iyz="0.0" ixz="-0.000923"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.075 0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/limb2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.075 0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/limb2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="limb3_1">
+  <inertial>
+    <origin xyz="0.0 0.0 0.050000000000000044" rpy="0 0 0"/>
+    <mass value="6.165375582669969"/>
+    <inertia ixx="0.008991" iyy="0.008991" izz="0.007707" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.125 -0.0 -0.15" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/limb3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.125 -0.0 -0.15" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/limb3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="limb4_1">
+  <inertial>
+    <origin xyz="-0.02283653671191263 -3.3552443715700145e-17 0.04225427622591388" rpy="0 0 0"/>
+    <mass value="6.383618554951956"/>
+    <inertia ixx="0.008001" iyy="0.010215" izz="0.010193" ixy="-0.0" iyz="-0.0" ixz="0.001547"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.125 -0.0 -0.25" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/limb4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.125 -0.0 -0.25" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/limb4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="limb5_1">
+  <inertial>
+    <origin xyz="-0.042254276225913975 -2.796036976308341e-17 0.022836536711912547" rpy="0 0 0"/>
+    <mass value="6.3836185549519655"/>
+    <inertia ixx="0.010193" iyy="0.010215" izz="0.008001" ixy="-0.0" iyz="-0.0" ixz="0.001547"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.05 -0.0 -0.3" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/limb5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.05 -0.0 -0.3" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find five_joint_arm_description)/meshes/limb5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="world"/>
+
+<joint name="world_base_joint" type="fixed">
+  <origin xyz="0.0 0.0 0.00" rpy="0 0 0"/>
+  <parent link="world"/>
+  <child link="base_link"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+
+
+<joint name="base_l1_joint" type="revolute">
+  <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="limb1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit lower="-2.14" upper="2.14" effort="100" velocity="100"/>
+  <dynamics damping="10" friction="1.0"/>
+</joint>
+
+<joint name="l1_l2_joint" type="revolute">
+  <origin xyz="0.075 -0.0 0.05" rpy="0 0 0"/>
+  <parent link="limb1_1"/>
+  <child link="limb2_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit lower="-2.14" upper="2.14" effort="100" velocity="100"/>
+  <dynamics damping="10" friction="1.0"/>
+</joint>
+
+<joint name="l2_l3_joint" type="revolute">
+  <origin xyz="0.05 0.0 0.05" rpy="0 0 0"/>
+  <parent link="limb2_1"/>
+  <child link="limb3_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit lower="-2.14" upper="2.14" effort="100" velocity="100"/>
+  <dynamics damping="10" friction="1.0"/>
+</joint>
+
+<joint name="l3_l4_joint" type="revolute">
+  <origin xyz="0.0 0.0 0.1" rpy="0 0 0"/>
+  <parent link="limb3_1"/>
+  <child link="limb4_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit lower="-2.14" upper="2.14" effort="100" velocity="100"/>
+  <dynamics damping="10" friction="1.0"/>
+</joint>
+
+<joint name="l4_l5_joint" type="revolute">
+  <origin xyz="-0.075 0.0 0.05" rpy="0 0 0"/>
+  <parent link="limb4_1"/>
+  <child link="limb5_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit lower="-2.14" upper="2.14" effort="100" velocity="100"/>
+  <dynamics damping="10" friction="1.0"/>
+</joint>
+
+</robot>
